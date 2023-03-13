@@ -4,7 +4,7 @@ import java.util.Date;
 
 /**
  * @author alex
- * @professor
+ * @professor Gabriel Vieira
  * In a class named Person, it is desired to maintain the name, gender, date of birth,
  * and marital status of a certain person. The name, gender, and date of birth should
  * be assigned in the constructor of the class, and the marital status should be set
@@ -16,18 +16,17 @@ import java.util.Date;
 public class Person {
     /**
      * TODO PROGRAM IMPLEMENTS.
-     * @param x TODO
-     * @param y TODO
-     * @return z TODO.
+     * @param X TODO
+     * @param Y TODO
+     * @return Z TODO.
      */
-    private String name = "";
-    private String maritalStatus = "Single";
+    private String name = "", maritalStatus = "Single";
     private char genre;
     private Date dateOfBirth;
     public void Person(String name, char genre, Date birth) {
-        this.name = name;
-        this.genre = genre;
-        this.dateOfBirth = birth;
+        this.setName(name);
+        this.setGenre(genre);
+        this.setDateOfBirth(birth);
     }
 
     public String getName() {
@@ -60,5 +59,17 @@ public class Person {
 
     public Date getDateOfBirth() {
         return dateOfBirth;
+    }
+
+    public void setDateOfBirth(String s) {
+    }
+
+    @Override
+    public String toString() {
+        return "Pessoas:" +
+                "\n---------------------------------------\nNome:" + name +
+                "\nEstado Civil'" + maritalStatus + "\nGênero:" + genre +
+                "\nData de Aniversário:" + dateOfBirth +
+                "\n---------------------------------------";
     }
 }
